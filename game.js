@@ -75,11 +75,11 @@ if(vencedor!=""){
   gameOver=true 
   classVazia.classList.add('classFim')
   if (playTime == player1) {
-    document.getElementById("txt1").textContent="GANHOU";
+    document.getElementById("txt1").textContent="QUEM GANHOU FOI O";
     var player = document.querySelectorAll('div#mostrador img')[0]
     player.setAttribute('src', 'bola.png')
   } else {
-    document.getElementById("txt1").textContent="GANHOU";
+    document.getElementById("txt1").textContent="QUEM GANHOU FOI O";
     var player = document.querySelectorAll('div#mostrador img')[0]
     player.setAttribute('src', 'x.png')
   }
