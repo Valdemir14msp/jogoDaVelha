@@ -1,0 +1,128 @@
+html{
+  height: 100%;
+}
+/* 
+#ajuste{
+  height: 6vh;
+} */
+
+body{
+  background: rgba(32, 1, 49, 0.933);
+  background-image: linear-gradient(-45deg, rgb(87, 6, 6), rgb(6, 6, 109));
+  width: 252px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 100%;
+  margin-bottom: 15%;
+}
+
+
+#a1{ 
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+#a2{
+  cursor: pointer;
+  border-left:  2px solid white;
+  border-bottom:  2px solid white;
+  border-right:  2px solid white;
+}
+#a3{
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
+
+#b1{
+  cursor: pointer;
+  border-top:  2px solid white;
+  border-right:  2px solid white;
+  border-bottom:  2px solid white;
+}
+#b2{
+  cursor: pointer;
+  border: 2px solid white;
+}
+#b3{
+  cursor: pointer;
+  border-top:  2px solid white;
+  border-left:  2px solid white;
+  border-bottom:  2px solid white;
+}
+
+#c1{
+  cursor: pointer;
+  border-top:  2px solid white;
+  border-right:  2px solid white;
+}
+#c2{
+  cursor: pointer;
+  border-left:  2px solid white;
+  border-top:  2px solid white;
+  border-right:  2px solid white;
+}
+#c3{
+  cursor: pointer;
+  border-top:  2px solid white;
+  border-left:  2px solid white;
+  border-top:  2px solid white;
+}
+
+#txt1{
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 20pt;
+  color: rgb(0, 162, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mostrador{
+  height: 50px;
+  display: flex;
+  float: left;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.espaço{
+  width: 80px;
+  height: 80px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tabuleiro{
+  margin-top: 50px;
+  width: 252px;
+
+}
+.classVazia{
+  display: none;
+}
+
+.classFim{
+  cursor: pointer;
+  width: auto;
+  height: auto -10px;
+  margin-top: 30px;
+  text-align: center;
+  background: rgba(138, 43, 43, 0.116);
+  display: block;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+#txt2{
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 20pt;
+  color: rgb(175, 73, 5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
