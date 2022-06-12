@@ -73,18 +73,45 @@ body{
 #txt1{
   font-weight: bold;
   margin-right: 20px;
-  font-size: 20pt;
+  font-size: 2opt;
   color: rgb(0, 162, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#mostrador{
+.tabuleiro{
+  margin-top: 50px;
+  width: 252px;
+}
+
+.mostrador{
   height: 50px;
   display: flex;
-  float: left;
+  font-size: 20pt;
   align-items: center;
   margin-bottom: 20px;
   margin-top: 30px;
+}
+
+.mostradorFinal{
+  height: 50px;
+  font-size: 20pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#iconFinal{
+  height: 50px;
+  margin-right: 20px;
+}
+
+.mostradorVazio{
+  display: none;
+}
+
+.mostradorVazioFinal{
+  display: none;
 }
 
 .espaço{
@@ -96,15 +123,10 @@ body{
   justify-content: space-around;
 }
 
-.tabuleiro{
-  margin-top: 50px;
-  width: 252px;
 
-}
 .classVazia{
   display: none;
 }
-
 .classFim{
   cursor: pointer;
   width: auto;
