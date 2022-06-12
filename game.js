@@ -2,20 +2,25 @@ const player1 = 'X'
 const player2 = '0'
 var playTime = player1
 var gameOver = false
+
 var classVazia = document.querySelector('.classVazia')
 var btn = document.querySelector('#btn')
+
+var mostrador = document.querySelector('.mostrador')
+var mostradorFinal = document.querySelector('.mostradorVazioFinal')
+
 var contador =0
 
 atualizaMostrador()
 inicializarEspacos()
 
-function atualizaMostrador() {
+function atualizaMostrador(){
   if (gameOver) {return;}
   if (playTime == player1) {
-    var player = document.querySelectorAll('div#mostrador img')[0]
+    var player = document.querySelectorAll('div.mostrador img')[0]
     player.setAttribute('src', 'x.png')
   } else {
-    var player = document.querySelectorAll('div#mostrador img')[0]
+    var player = document.querySelectorAll('div.mostrador img')[0]
     player.setAttribute('src', 'bola.png')
   }
 }
@@ -43,7 +48,7 @@ function inicializarEspacos() {
         atualizaMostrador()
         verificarVencedor()
       }
-    } );
+    });
   }
 }
 
@@ -73,39 +78,44 @@ if(((a1==b1 && a1==c1) || (a1==a2 && a1==a3) || (a1==b2 && a1==c3))&& a1!=""){
 
 if(vencedor!=""){
   gameOver=true 
+  classVazia.classList.remove('classVazia')
   classVazia.classList.add('classFim')
+
+  mostrador.classList.remove('mostrador')
+  mostrador.classList.add('mostradorVazio')
+
+  mostradorFinal.classList.remove('mostradorVazioFinal')
+  mostradorFinal.classList.add('mostradorFinal')
+
   if (playTime == player1) {
-    document.getElementById("txt1").textContent="QUEM GANHOU FOI O";
-    var player = document.querySelectorAll('div#mostrador img')[0]
+    var player = document.querySelectorAll('div.mostradorFinal img')[0]
     player.setAttribute('src', 'bola.png')
   } else {
-    document.getElementById("txt1").textContent="QUEM GANHOU FOI O";
-    var player = document.querySelectorAll('div#mostrador img')[0]
+    // document.getElementById("txt1").textContent="GANHOU";
+    var player = document.querySelectorAll('div.mostradorFinal img')[0]
     player.setAttribute('src', 'x.png')
   }
 
   btn.addEventListener('click', ()=>{
     location.reload()
   })
-  
-  
-  // await sleep(50)
-  // alert("O vencedor foi o")
+
 }else if(contador>=9){
-  document.getElementById("txt1").textContent="DEU VELHA"
+  classVazia.classList.remove('classVazia')
   classVazia.classList.add('classFim')
 
-  var player = document.querySelectorAll('div#mostrador img')[0]
+  mostrador.classList.remove('mostrador')
+  mostrador.classList.add('mostradorVazio')
+
+  mostradorFinal.classList.remove('mostradorVazioFinal')
+  mostradorFinal.classList.add('mostradorFinal')
+
+  document.getElementById("txt1").textContent="DEU VELHA"
+  var player = document.querySelectorAll('div.mostradorFinal img')[0]
   player.setAttribute('src', 'velha.gif')
 
   btn.addEventListener('click', ()=>{
     location.reload()
   })
 }
-
-
-
-// function sleep(ms){
-//   return new Promise(resolve =>setTimeout(resolve, ms))
-// }
 }
